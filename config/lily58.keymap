@@ -61,11 +61,11 @@
 // |       |     |     |      |      |      |        |  |       |  +   |   -    |   =   |  [    |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |        |       |
             bindings = <
-&kp F1    &kp F2        &kp F3      &kp F4  &kp F5  &kp F6                       &trans      &trans       &trans    &trans       &trans    &trans
-&kp F7    &kp F8        &kp F9      &kp F10 &kp F11 &kp F12                      &trans      &DE_U_UMLAUT &kp UP    &DE_O_UMLAUT &trans    &trans
-&kp GRAVE & DE_A_UMLAUT & DE_ESZETT &       &       &                            &trans      &kp LEFT     &kp DOWN  &kp RIGHT    &trans &trans
-&         &             &           &       &       &         &trans   &trans    &kp KP_PLUS &kp MINUS    &kp EQUAL &kp LBKT     &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans       &trans
+&kp F1    &kp F2          &kp F3        &kp F4  &kp F5  &kp F6                       &trans      &trans          &trans    &trans          &trans    &trans
+&kp F7    &kp F8          &kp F9        &kp F10 &kp F11 &kp F12                      &trans      &kp DE_U_UMLAUT &kp UP    &kp DE_O_UMLAUT &trans    &trans
+&kp GRAVE &kp DE_A_UMLAUT &kp DE_ESZETT &       &       &                            &trans      &kp LEFT        &kp DOWN  &kp RIGHT       &trans    &trans
+&         &               &             &       &       &         &trans   &trans    &kp KP_PLUS &kp MINUS       &kp EQUAL &kp LBKT        &kp RBKT  &kp BSLH
+                          &trans        &trans  &trans  &trans    &trans    &trans   &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
