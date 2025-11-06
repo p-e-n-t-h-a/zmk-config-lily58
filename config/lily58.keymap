@@ -36,17 +36,17 @@
         lower_layer {
             display-name = "Lower Layer";
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |       |     |     |  7   |  8   |  9   |                   |  `   |  !    |  @    |  #   |   $   |  %    |
-// |       |     |     |  4   |  5   |  6   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |  1   |  2   |  3   |   0    |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   | OFF  |       |       |      |       |       |
+// | POWRS |     |     |  7   |  8   |  9   |                   |  `   |  !    |  @    |  #   |   $   |  %    |
+// | vol + |     | >\= |  4   |  5   |  6   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+// | vol - | <<  | >>  |  1   |  2   |  3   |   0    |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |  DEL  |       |
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans    &trans    &trans     &trans
-&ext_power EP_TOG &trans           &trans            &kp N7            &kp N8       &kp N9                       &kp GRAVE &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT 
-&trans            &trans           &trans            &kp N4            &kp N5       &kp N6                       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR   &kp TILDE
-&trans            &trans           &trans            &kp N1            &kp N2       &kp N3    &kp N0   &trans    &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE
-                                                     &trans            &trans       &trans    &trans   &trans    &trans    &kp DEL   &trans
+&bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                  &kp soft_off    &trans    &trans    &trans    &trans     &trans
+&ext_power EP_TOG &trans           &trans            &kp KP_N7         &kp KP_N8    &kp KP_N9                     &kp GRAVE       &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT 
+&kp C_VOLUME_UP   &trans           &kp C_PP          &kp KP_N4         &kp KP_N5    &kp KP_N6                     &kp CARET       &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR   &kp TILDE
+&kp C_VOLUME_DOWN &kp C_PREV       &kp C_NEXT        &kp KP_N1         &kp KP_N2    &kp KP_N3 &kp KP_N0 &trans    &kp MINUS       &kp PLUS  &kp LBRC  &kp RBRC   &kp PIPE
+                                                     &trans            &trans       &trans    &trans    &trans    &trans          &kp DEL   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -57,13 +57,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |        |       |       |       |       |
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |                   |      |   UE   |   ^   |  OE   |       |       |
-// |   `   |  AE |  SZ |      |      |      |                   |      |   <-   |   v   |  ->   |       |       |
+// |       |  AE |  SZ |      |      |      |                   |      |   <-   |   v   |  ->   |       |       |
 // |       |     |     |      |      |      |        |  |       |  +   |   -    |   =   |  [    |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |   DEL  |       |
             bindings = <
 &kp F1    &kp F2          &kp F3        &kp F4  &kp F5  &kp F6                       &trans      &trans          &trans    &trans          &trans    &trans
 &kp F7    &kp F8          &kp F9        &kp F10 &kp F11 &kp F12                      &trans      &kp EN_U_UMLAUT &kp UP    &kp EN_O_UMLAUT &trans    &trans
-&kp GRAVE &kp EN_A_UMLAUT &kp EN_SZ     &trans  &trans  &trans                       &trans      &kp LEFT        &kp DOWN  &kp RIGHT       &trans    &trans
+&trans    &kp EN_A_UMLAUT &kp EN_SZ     &trans  &trans  &trans                       &trans      &kp LEFT        &kp DOWN  &kp RIGHT       &trans    &trans
 &trans    &trans          &trans        &trans  &trans  &trans    &trans    &trans   &kp KP_PLUS &kp MINUS       &kp EQUAL &kp LBKT        &kp RBKT  &kp BSLH
                           &trans        &trans  &trans  &trans    &trans    &trans   &kp DEL     &trans
             >;
