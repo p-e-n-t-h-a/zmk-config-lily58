@@ -1,0 +1,17 @@
+# West workspace (created by `west init`/`west update`)
+.west/
+zmk/
+zephyr/
+modules/
+tools/
+bootloader/
+
+# Build output
+build/
+export/
+
+# Editor/OS cruft
+.vscode/
+.idea/
+*.swp
+.DS_Store
